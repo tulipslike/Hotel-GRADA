@@ -1,0 +1,695 @@
+@charset "UTF-8";
+@import url(reset.css);
+@import url(font.css);
+@import url(all.min.css);
+
+/*모든 해상도 - 스타일 공통*/
+#header, #tnb, #main {
+  transition: all 0.5s;
+}
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  
+  width: 15%;
+  height: 100%;
+/*  background: #fff;*/
+  box-shadow: 0 0 3px rgba(0,0,0,0.3)
+}
+#tnb {
+  margin-left: 15%;
+  height: 35px;
+  background: #212121;
+}
+#main {
+  margin-left: 15%;
+  
+}
+#header .logo {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  margin-left: -90px;
+  
+  
+  width: 180px;
+  height: 135px;
+  
+}
+#header .logo a {
+  display: block;
+  height: 100%;
+  background: url(../img/logo1.png)no-repeat 0 center / 100%;
+  transition: all 0.3s;
+}
+
+#header .gnb {
+  position: absolute;
+  top: 250px;
+  right: 17%;
+/*  transform: translateX(50%);*/
+  color: #222;
+  
+}
+#header .gnb a {
+  display: block;
+  font-size: large;
+  padding: 15px 30px;
+  transition: all 0.3s;
+  
+}
+#header .gnb i{
+  margin-right: 15px;
+  transition: all 0.3s;
+  
+}
+#header .gnb a:hover {
+  color: #0085b2
+}
+
+#header .util {
+  position: absolute;
+  bottom: 50px;
+  right: 50%;
+  margin-right: -45px;
+  
+  width: 90px;
+}
+#header .util img {
+  display: block;
+}
+#header .util a {
+  float: left;
+}
+#header .util a:hover {
+  opacity: 0.8;
+}
+
+/*tnb*/
+#tnb img {
+  display: block;
+}
+#tnb .tnb-left {
+  float: left;
+  margin-left: 20px;
+}
+#tnb .tnb-right {
+  float: right;
+  margin-right: 20px;
+}
+#tnb .tnb-left a {
+  padding: 6px 0
+}
+#tnb .tnb-right a {
+  padding: 7px 0;
+}
+
+#tnb a {
+  display: block;
+  float: left;
+}
+#tnb a:hover {
+  opacity: 0.7;
+}
+
+/*main*/
+#main article {
+  float: left;
+  width: 20%;
+  height: 250px;
+  transition: all 0.5s
+}
+#main article:nth-child(1) {background: #eee}
+#main article:nth-child(2) {background: #ddd}
+#main article:nth-child(3) {background: #ccc}
+#main article:nth-child(4) {background: #bbb}
+#main article:nth-child(5) {background: #aaa}
+#main article:nth-child(6) {background: #999}
+#main article:nth-child(7) {background: #888}
+#main article:nth-child(8) {background: #777}
+#main article:nth-child(9) {background: #666}
+#main article:nth-child(10) {background: #555}
+#main article:nth-child(11) {background: #444}
+#main article:nth-child(12) {background: #333}
+
+#main article:nth-child(1) {
+  width: 60%;
+  height: 500px;
+}
+#main article:nth-child(2), 
+#main article:nth-child(6), 
+#main article:nth-child(9) {
+  width: 40%;
+}
+/*<!--     이미지 1 4 5 7 9 10 12-->*/
+#main [class ^= "bg"] {
+  position: relative;
+  width: auto;
+  height: 100%;
+  background: no-repeat center/ cover;
+  overflow: hidden;
+  cursor: crosshair;
+}
+#main [class ^= "bg"] h3 {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: normal;
+  text-shadow: 10px 10px 5px rgba(0,0,0,0.3);
+  transform: scale(5);
+  opacity: 0;
+  transition: all 0.3s; 
+}
+#main [class ^= "bg"]:hover h3 {
+  transform: scale(1);
+  opacity: 1;
+}
+#main .bg-1 h3 {
+   transform: scale(1);
+  opacity: 1;
+  font-size: 120px;
+}
+#main article .bg-1 h3 {
+  
+}
+/*글상자*/
+#main [class ^= "txt"] {
+  position: relative;
+  width: auto;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #fff;
+}
+#main [class ^= "txt"] h3 {
+  color: #222;
+  margin-bottom: 10px;
+  
+}
+#main [class ^= "txt"] p {
+  font-style: italic;
+  line-height: 1.5;
+  letter-spacing: 0.5;
+}
+#main [class ^= "txt"] i {
+  position: absolute;
+  right: -200px;
+  bottom: -100px;
+  
+  font-size: 300px;
+  color: #0af;
+  opacity: 0.2;
+  transition: all 0.3s
+}
+#main [class ^= "txt"]:hover i {
+  right: -50px;
+  opacity: 0.05;
+  
+}
+#main .txt-2 i {
+  right: -50px;
+  opacity: 0.3;
+  animation: icon-rotate 3s linear infinite;
+  text-shadow: 0px 0px 10px #000 
+  
+}
+#main .txt-2:hover i {
+  right: -50px;
+  opacity: 0.3;
+  animation-play-state: paused
+}
+/*애니메이션 만들기*/
+@keyframes icon-rotate {
+  100% {transform: rotate(360deg)}
+}
+
+#main article:nth-child(3) {
+  background: #eee
+}
+#main article:nth-child(8) {
+  background: #ccc
+}
+
+#main .txt-2,
+#main .txt-4 {
+  background: rgba(250,255,0,0.2)
+}
+
+
+#main .bg-1 {
+  background-image: url(../img/pic1.jpg)
+}
+#main .bg-2 {
+  background-image: url(../img/pic2.jpg)
+}
+#main .bg-3 {
+  background-image: url(../img/pic3.jpg)
+}
+#main .bg-4 {
+  background-image: url(../img/pic4.jpg)
+}
+#main .bg-5 {
+  background-image: url(../img/pic5.jpg)
+}
+#main .bg-6 {
+  background-image: url(../img/pic6.jpg)
+}
+#main .bg-7 {
+  background-image: url(../img/pic7.jpg)
+}
+
+
+
+/*<!--     글상자 2 3 6 8 11-->*/
+
+/*<!--    1280-1600-->*/
+
+@media screen and (min-width: 1280px) and (max-width: 1600px) {
+  #header {
+    position: relative;
+    width: auto;
+    height: 80px;
+    
+  }
+  #tnb,
+  #main {
+    margin: 0;
+  }
+  #header .logo {
+    margin: 0;
+    left: 20px;
+    top: 0;
+    width: 250px;
+    height: 50px;
+    padding-top: 15px;
+  }
+  #header .logo a {
+    background-image: url(../img/logo2.png);
+    padding: 
+  }
+  
+  #header .gnb {
+    margin: 0;
+    top: 20px;
+    right: 300px;
+  }
+  #header .gnb a {
+    float: left;
+  }
+  #header .util {
+    margin: 0;
+    bottom: 15px;
+    right: 20px;
+  }
+  
+}
+
+/*1024~1279
+util 숨김| gnb 변경 | logo 변경 | article 4칸으로
+*/
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  
+  #header {
+    position: relative;
+    height: 80px;
+    width: auto
+  }
+  #tnb,
+  #main {
+    margin: 0
+  }
+  
+  #header .logo {
+    margin: 0;
+    left: 20px;
+    top: 0;
+    width: 250px;
+    height: 50px;
+  }
+  #header .logo a {
+    background-image: url(../img/logo2.png);
+    padding: 15px 0
+  }
+  
+  #header .gnb {
+    margin: 0;
+    top: 20px;
+    right: 20px
+  }
+  #header .gnb a {
+    float: left;
+  }
+  
+  #header .util {
+    display: none;
+  }
+  
+  #main article:nth-child(n) {
+    width: 25%
+  }
+  #main article:nth-child(1) {
+    width: 75%
+  }
+  
+  #main article:nth-child(6),
+  #main article:nth-child(7),
+  #main article:nth-child(12) {
+    width: 50%
+  }
+  
+}
+
+/*780-1023 
+util 숨김| gnb 변경 + a | logo 변경 | article 3칸으로
+*/
+@media screen and (min-width: 780px) and (max-width: 1023px) {
+  
+  #header {
+    position: relative;
+    height: 80px;
+    width: auto
+  }
+  #tnb,
+  #main {
+    margin: 0
+  }
+  
+  #header .logo {
+    margin: 0;
+    left: 20px;
+    top: 0;
+    width: 250px;
+    height: 50px;
+  }
+  #header .logo a {
+    background-image: url(../img/logo2.png);
+    padding: 15px 0
+  }
+  
+  #header .gnb {
+    margin: 0;
+    top: 20px;
+    right: 15px;
+  }
+  #header .gnb a {
+    float: left;
+    padding: 15px; 
+  }
+  #header .gnb i {
+    margin-right: 0;
+  }
+  #header .util {
+    display: none;
+  }
+  
+  #main article:nth-child(n) {
+    width: 33.3333%
+  }
+  #main article:nth-child(1) {
+    width: 100%;
+    height: 450px;
+  }
+  
+
+  #main article:nth-child(2),
+  #main article:nth-child(5) {
+    width: 66.6666%
+  }
+  
+/*  없애기*/
+  #main article:nth-child(n+9) {
+    display: none;
+  }
+}
+
+/*640-779*/
+@media screen and (min-width: 640px) and (max-width: 779px) {
+  
+  #header {
+    position: relative;
+    height: 80px;
+    width: auto
+  }
+  #tnb,
+  #main {
+    margin: 0
+  }
+  
+  #header .logo {
+    margin: 0;
+    left: 10px;
+    top: 0;
+    width: 250px;
+    height: 50px;
+  }
+  #header .logo a {
+    background-image: url(../img/logo2.png);
+    padding: 15px 0
+  }
+  
+  #header .gnb {
+    margin: 0;
+    top: 20px;
+    right: 0;
+  }
+  #header .gnb a {
+    float: left;
+    padding: 15px;
+  }
+  #header .gnb i {
+    margin-right: 0;
+    display: none;
+  }
+  #header .util {
+    display: none;
+  }
+  
+  #main article:nth-child(n) {
+    width: 50%
+  }
+  #main article:nth-child(1) {
+    width: 100%;
+    height: 400px;
+  }
+  
+
+  #main article:nth-child(2) {
+    width: 100%
+  }
+  
+/*  없애기*/
+  #main article:nth-child(n+9) {
+    display: none;
+  }
+}
+
+/*480-639 
+header2줄 |util 숨김| gnb 변경 + a | logo 변경 | article 2칸으로
+*/
+@media screen and (min-width: 480px) and (max-width: 639px) {
+  
+  #header {
+    position: relative;
+    height: 130px;/*80(입력된 값)+50(gnb)*/
+    width: auto
+  }
+  #tnb,
+  #main {
+    margin: 0
+  }
+  
+  #header .logo {
+    margin: auto;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: auto;
+  }
+  #header .logo a {
+    background-image: url(../img/logo2.png);
+    padding: 15px 0;
+    height: 50px;
+  }
+  
+  #header .gnb {
+    margin: 0;
+    position: relative;
+    top: 0px;
+    right: 0;
+  }
+  #header .gnb a {
+    float: left;
+    padding: 0;
+    width: 25%;
+    text-align: center;
+    line-height: 50px;
+  }
+  #header .gnb i {
+    margin-right: 0;
+    display: none;
+  }
+  #tnb,
+  #header .util {
+    display: none;
+  }
+  
+  #main article:nth-child(n) {
+    width: 50%;
+    height: 200px;
+  }
+  #main article:nth-child(1) {
+    width: 100%;
+    height: 300px;
+  }
+  
+
+  #main article:nth-child(2) {
+    width: 100%
+  }
+  
+/*  없애기*/
+  #main article:nth-child(n+9) {
+    display: none;
+  }
+  /*  이미지*/
+  #main [class ^= "bg"] h3 {
+    opacity: 1;
+    transform: scale(0.8)
+  }
+  #main .bg-1 h3 {
+    font-size: 100px;
+  }
+  
+/*  글상자*/
+
+  #main [class ^= "txt"] i {
+    font-size: 250px;
+    right: -90px;
+    bottom: -90px;
+    opacity: 0.5;
+  }
+  #main [class ^= "txt"]:hover i {
+    right: 0;
+    opacity: 0
+  }
+  #main .txt-2:hover i {
+    right: -90px;
+    opacity: 0.5
+  }
+}
+
+/*-479 
+header2줄 |util 숨김| gnb 변경 + a | logo 변경 | article 2칸으로
+*/
+@media screen and (max-width: 479px) {
+  
+  #header {
+    position: absolute;
+    height: 130px;/*80(입력된 값)+50(gnb)*/
+    width: 100%;
+    height: 90vh;
+    background: none;
+    box-shadow: none;
+    
+  }
+  #tnb,
+  #main {
+    margin: 0
+  }
+  
+  #header .gnb {
+    top: 40vh;
+    right: 0;
+    left: 0;
+    width: 70vw;
+    margin: auto;
+  }
+  #header .gnb a {
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-shadow: 0 0 5px #111;
+    box-shadow: 7px 7px 17px rgba(0,0,0,0.3)
+  }
+  #header .gnb a:hover {
+    transform: scale(1.1);
+    color: inherit;
+    background: rgba(255,255,70,0.5)
+  }
+  
+  
+  #tnb,
+  #header .util {
+    display: none;
+  }
+  
+  #main article:nth-child(n) {
+    width: 50%;
+    height: 150px;
+  }
+  #main article:nth-child(1) {
+    width: 100%;
+    height: 80vh;/*viewport height*/
+  }
+  #main article:nth-child(2) {
+    width: 100%
+  }
+  
+/*  없애기*/
+  #main article:nth-child(n+9) {
+    display: none;
+  }
+/*  이미지*/
+  #main [class ^= "bg"] h3 {
+    opacity: 1;
+    transform: scale(0.8)
+  }
+  #main .bg-1 h3 {
+    display: none;
+  }
+  
+/*  글상자*/
+  #main [class ^= "txt"] span {
+/*
+    font-size: small;
+    letter-spacing: -0.5px;
+*/
+    display: none;
+  }
+  #main [class ^= "txt"] i {
+    
+    font-size: 200px;
+    right: -50px;
+    bottom: -90px;
+    opacity: 0.5
+  }
+  #main [class ^= "txt"]:hover i {
+    right: 0;
+    opacity: 0
+  }
+  #main .txt-2:hover i {
+    right: -90px;
+    opacity: 0.5
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
